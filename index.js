@@ -4,15 +4,27 @@
 var spawn = require('child_process').spawn;
 var rm = require('fs-force/delete');
 
+var create = Object.create;
+
 const REPO_DIR = 'D:\\JS_FILES\\NodeJS\\node_modules';
+const DONOTHING = () => {};
+const THROWERR = (error) => {throw error};
 
 var _getfunc = (fn, ...fnlist) =>
 	typeof fn === 'function' ? fn : _getfunc(...fnlist);
 
+var _getdesc = (desc) => {
+	var result = create(null);
+	var mkfunc = (fname, df) => result[fname] = _getfunc(desc[fname], df);
+	['onallclean', 'oneachclean', 'onclonebegin', 'oncloneend'].forEach((fname) => mkfunc(fname, DONOTHING));
+	mkfunc('onerror', THROWERR);
+	return result;
+};
+
 var clone = (rname, desc) => {
 	var target = `${REPO_DIR}\\rname`;
 	var onallclean = desc.onallclean;
-	var oneacgclean = desc.oneachclean;
+	var oneachclean = desc.oneachclean;
 	var onclonebegin = desc.onclonebegin;
 	var oncloneend = desc.oncloneend;
 	var onerror = desc.onerror;
@@ -37,3 +49,5 @@ var clone = (rname, desc) => {
 		});
 	}
 };
+
+module.exports = (rname, desc) => clone(rname, _getdesc(desc));
