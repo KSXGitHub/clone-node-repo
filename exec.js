@@ -3,7 +3,7 @@
 ((module) => {
 	'use strict';
 	
-	require('.')(process.argv, {
+	require('.')(process.argv[2], {
 		onallclean() {
 			console.log('Cleanning completed.');
 		},
