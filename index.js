@@ -33,6 +33,7 @@ var clone = (rname, desc) => {
 		if (error) {
 			return onerror(error);
 		}
+		onallclean(info);
 		var childprc = spawn(`git clone https://github.com/ksxnodemodules/${rname}.git ${target}`);
 		onclonebegin(childprc);
 		childprc.on('exit', (code, signal) => {
