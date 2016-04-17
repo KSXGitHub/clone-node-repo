@@ -7,16 +7,8 @@ My own script to clone my own repo at home
 
 #### Windows Command Prompt
 
-```batch
-set CLONED_NODE_REPO=<repo-name>
-clone-node-repo
-```
-
-#### Bash shell
-
 ```bash
-CLONED_NODE_REPO=<repo-name>
-clone-node-repo
+clone-node-repo <repo-name>
 ```
 
 ### JavaScript
