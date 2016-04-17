@@ -6,7 +6,7 @@ My own script to clone my own repo at home
 ### Command line
 
 ```bash
-clone-node-repo <repo-name>
+CLODED_NODE_REPO=<repo-name>; clone-node-repo
 ```
 
 ### JavaScript
