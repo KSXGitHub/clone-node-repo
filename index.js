@@ -6,7 +6,7 @@ var rm = require('fs-force/delete');
 
 var create = Object.create;
 
-const REPO_DIR = 'D:\\JS_FILES\\NodeJS\\node_modules';
+const REPO_DIR = 'D:/JS_FILES/NodeJS/node_modules';
 const DONOTHING = () => {};
 const THROWERR = (error) => {throw error};
 
@@ -22,7 +22,7 @@ var _getdesc = (desc) => {
 };
 
 var clone = (rname, desc) => {
-	var target = `${REPO_DIR}\\rname`;
+	var target = `${REPO_DIR}/rname`;
 	var onallclean = desc.onallclean;
 	var oneachclean = desc.oneachclean;
 	var onclonebegin = desc.onclonebegin;
@@ -34,7 +34,7 @@ var clone = (rname, desc) => {
 			return onerror(error);
 		}
 		onallclean(info);
-		var childprc = spawn(`git clone https://github.com/ksxnodemodules/${rname}.git ${target}`);
+		var childprc = spawn('git', ['clone', `https://github.com/ksxnodemodules/${rname}.git`, target]);
 		onclonebegin(childprc);
 		childprc.on('exit', (code, signal) => {
 			if (signal) {
