@@ -3,7 +3,7 @@
 ((module) => {
 	'use strict';
 	
-	require('.')(process.env.CLONED_NODE_REPO, {
+	require('.')(process.argv, {
 		onallclean() {
 			console.log('Cleanning completed.');
 		},
