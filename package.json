@@ -6,6 +6,7 @@
 	"main": "index.js",
 	"bin": "exec.js",
 	"dependencies": {
-		"fs-force": ">=1.0.1 <2.0.0"
+		"fs-force": ">=1.0.1 <2.0.0",
+		"fs-force-action-as-string": "ksxnodemodules/fs-force-action-as-string#v0.0.0"
 	}
 }
