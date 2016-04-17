@@ -1,7 +1,7 @@
 
 'use strict';
 
-require('.')(process.argv[2], {
+require('.')(process.env.CLONED_NODE_REPO, {
 	onallclean() {
 		console.log('Cleanning completed.');
 	},
