@@ -5,8 +5,6 @@ My own script to clone my own repo at home
 
 ### Command line
 
-#### Windows Command Prompt
-
 ```bash
 clone-node-repo <repo-name>
 ```
