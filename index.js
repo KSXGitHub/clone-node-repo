@@ -22,7 +22,7 @@ var _getdesc = (desc) => {
 };
 
 var clone = (rname, desc) => {
-	var target = `${REPO_DIR}/rname`;
+	var target = `${REPO_DIR}/${rname}`;
 	var onallclean = desc.onallclean;
 	var oneachclean = desc.oneachclean;
 	var onclonebegin = desc.onclonebegin;
