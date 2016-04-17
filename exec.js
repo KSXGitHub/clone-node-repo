@@ -3,12 +3,14 @@
 ((module) => {
 	'use strict';
 	
+	var stract = require('fs-force-action-as-string');
+	
 	require('.')(process.argv[2], {
 		onallclean() {
 			console.log('Cleanning completed.');
 		},
 		oneachclean(detail) {
-			console.log('Clean', detail);
+			console.log('Clean', stract(detail));
 		},
 		onclonebegin(childprc) {
 			['stdout', 'stderr']
