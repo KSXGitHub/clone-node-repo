@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var childprc = require('child_process').spawn('node', ['--es-staging', `${__dirname}/exec.js`, process.argv]);
+var childprc = require('child_process').spawn('node', ['--es-staging', `${__dirname}/exec.js`, process.argv[2]]);
 
 childprc.on('exit', (code, signal) => {
 	if (signal) {
