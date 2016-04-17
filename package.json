@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
 	"main": "index.js",
-	"bin": "call-exec.js",
+	"bin": "exec.js",
 	"dependencies": {
 		"fs-force": ">=1.0.1 <2.0.0"
 	}
