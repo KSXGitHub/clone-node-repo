@@ -10,7 +10,7 @@
 			console.log('Cleanning completed.');
 		},
 		oneachclean(detail) {
-			console.log('Clean', stract(detail));
+			console.log(stract(detail));
 		},
 		onclonebegin(childprc) {
 			['stdout', 'stderr']
