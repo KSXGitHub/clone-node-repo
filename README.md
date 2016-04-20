@@ -2,6 +2,19 @@
 # clone-node-repo
 My own script to clone my own repo at home
 
+## Install
+
+### Prerequisites
+
+ * [npm](https://nodejs.org/en/download/stable/)
+
+## Usage
+
+### Prerequisites
+
+ * [node](https://nodejs.org/en/download/stable/) >= 5.0.0, with flag `--es-staging`
+ * [git](https://git-scm.com/download)
+
 ## Usage
 
 ### Command line
