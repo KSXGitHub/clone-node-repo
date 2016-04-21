@@ -8,6 +8,12 @@ My own script to clone my own repo at home
 
  * [npm](https://nodejs.org/en/download/stable/)
 
+### Installation command
+
+```bash
+npm install -g KSXGitHub/clone-node-repo
+```
+
 ## Usage
 
 ### Prerequisites
