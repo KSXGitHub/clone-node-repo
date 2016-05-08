@@ -6,7 +6,7 @@ var rm = require('fs-force/delete');
 
 var create = Object.create;
 
-const REPO_DIR = 'D:/JS_FILES/NodeJS/node_modules';
+const REPO_DIR = 'C:/programming/javascript/npm-packages';
 const DONOTHING = () => {};
 const THROWERR = (error) => {throw error};
 
